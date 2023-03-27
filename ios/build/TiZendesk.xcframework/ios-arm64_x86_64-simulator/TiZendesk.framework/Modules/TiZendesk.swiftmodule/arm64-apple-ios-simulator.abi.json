@@ -1,0 +1,42 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TiZendesk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TitaniumKit",
+        "printedName": "TitaniumKit",
+        "declKind": "Import",
+        "moduleName": "TiZendesk"
+      },
+      {
+        "kind": "Import",
+        "name": "ZendeskCoreSDK",
+        "printedName": "ZendeskCoreSDK",
+        "declKind": "Import",
+        "moduleName": "TiZendesk"
+      },
+      {
+        "kind": "Import",
+        "name": "SupportSDK",
+        "printedName": "SupportSDK",
+        "declKind": "Import",
+        "moduleName": "TiZendesk"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

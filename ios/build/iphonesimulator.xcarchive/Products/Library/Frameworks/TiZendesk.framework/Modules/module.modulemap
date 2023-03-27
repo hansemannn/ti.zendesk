@@ -6,6 +6,6 @@ framework module TiZendesk {
 }
 
 module TiZendesk.Swift {
-    header "TiZendesk-Swift.h"
-    requires objc
+  header "TiZendesk-Swift.h"
+  requires objc
 }

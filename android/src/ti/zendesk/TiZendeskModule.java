@@ -10,48 +10,66 @@ package ti.zendesk;
 import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
-import org.appcelerator.kroll.common.TiConfig;
 import org.appcelerator.titanium.TiApplication;
 
-import zendesk.android.Zendesk;
-import zendesk.messaging.android.DefaultMessagingFactory;
-
+import zendesk.core.AnonymousIdentity;
+import zendesk.core.JwtIdentity;
+import zendesk.core.Zendesk;
+import zendesk.messaging.MessagingActivity;
+import zendesk.support.Support;
+import com.zendesk.service.ErrorResponse;
+import com.zendesk.service.ZendeskCallback;
 
 @Kroll.module(name = "TiZendesk", id = "ti.zendesk")
 public class TiZendeskModule extends KrollModule {
 
-    // Standard Debugging variables
-    private static final String LCAT = "TiZendeskModule";
-    private static final boolean DBG = TiConfig.LOGD;
-
-    public TiZendeskModule() {
-        super();
-    }
-
-    @Kroll.onAppCreate
-    public static void onAppCreate(TiApplication app) {
-    }
-
     // Methods
     @Kroll.method
-    public void initialize(String key) {
-        Zendesk.initialize(TiApplication.getAppCurrentActivity(),
-                key,
-                zendesk -> fireEvent("ready", new KrollDict()),
-                error -> {
-                    KrollDict kd = new KrollDict();
-                    kd.put("error", error.getMessage());
-                    fireEvent("error", kd);
+    public void initialize(KrollDict params) {
+        String appId = params.getString("appId");
+        String clientId = params.getString("clientId");
+        String url = params.getString("url");
 
-                },
-                new DefaultMessagingFactory()
-        );
+        Zendesk.INSTANCE.init(TiApplication.getAppCurrentActivity(), url, appId, clientId);
+        Support.INSTANCE.init(Zendesk.INSTANCE);
+    }
+
+    @Kroll.method
+    public void loginUser(KrollDict params) {
+        if (params != null) {
+            String jwt = params.getString("jwt");
+            String name = params.getString("name");
+            String email = params.getString("email");
+
+            if (jwt != null) {
+                Zendesk.INSTANCE.setIdentity(new JwtIdentity(jwt));
+            } else if (name != null && email != null) {
+                Zendesk.INSTANCE.setIdentity(new AnonymousIdentity.Builder()
+                        .withEmailIdentifier(email)
+                        .withNameIdentifier(name)
+                        .build());
+            }
+
+            return;
+        }
+
+        Zendesk.INSTANCE.setIdentity(new AnonymousIdentity());
     }
 
     @Kroll.method
     public void showMessaging() {
-        Zendesk.getInstance().getMessaging().showMessaging(TiApplication.getAppCurrentActivity());
+        MessagingActivity.builder().show(TiApplication.getAppCurrentActivity());
     }
 
+    @Kroll.method
+    public void registerForPushNotifications(String pushToken) {
+        Zendesk.INSTANCE.provider().pushRegistrationProvider().registerWithDeviceIdentifier(pushToken, new ZendeskCallback<String>() {
+            @Override
+            public void onSuccess(String result) {}
+
+            @Override
+            public void onError(ErrorResponse error) {}
+        });
+    }
 }
 

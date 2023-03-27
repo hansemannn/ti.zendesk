@@ -79,15 +79,19 @@ class TiZendeskModule: TiModule {
   @objc(loginUser:)
   func loginUser(arguments: [Any]?) {
     guard let arguments = arguments,
-          let params = arguments.first as? [String: Any],
-          let jwt = params["jwt"] as? String else {
+          let params = arguments.first as? [String: Any] else {
 
-      let anonymousIdentity = Identity.createAnonymous()
-      Zendesk.instance?.setIdentity(anonymousIdentity)
-      
+      Zendesk.instance?.setIdentity(Identity.createAnonymous())
+
       return
     }
-
-    Zendesk.instance?.setIdentity(Identity.jwt(Jwt(token: jwt)))
+    
+    if let jwt = params["jwt"] as? String {
+      Zendesk.instance?.setIdentity(Identity.createJwt(token: jwt))
+    } else if let name = params["name"] as? String, let email = params["email"] as? String {
+      Zendesk.instance?.setIdentity(Identity.createAnonymous(name: name, email: email))
+    } else {
+      Zendesk.instance?.setIdentity(Identity.createAnonymous())
+    }
   }
 }
