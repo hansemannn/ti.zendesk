@@ -71,8 +71,8 @@ class TiZendeskModule: TiModule {
     
     // Show the support UI
     TiThreadPerformOnMainThread({
-      let supportViewController = RequestUi.buildRequestUi(with: configurations)
-      TiApp.controller().topPresentedController().present(supportViewController, animated: true)
+      let requestListController = RequestUi.buildRequestList(with: configurations)
+      TiApp.controller().topPresentedController().present(requestListController, animated: true)
     }, false)
   }
   

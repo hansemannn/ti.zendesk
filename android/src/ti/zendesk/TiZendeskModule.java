@@ -12,11 +12,15 @@ import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.titanium.TiApplication;
 
+import zendesk.configurations.Configuration;
 import zendesk.core.AnonymousIdentity;
 import zendesk.core.JwtIdentity;
 import zendesk.core.Zendesk;
 import zendesk.messaging.MessagingActivity;
 import zendesk.support.Support;
+import zendesk.support.request.RequestActivity;
+import zendesk.support.requestlist.RequestListActivity;
+
 import com.zendesk.service.ErrorResponse;
 import com.zendesk.service.ZendeskCallback;
 
@@ -58,7 +62,11 @@ public class TiZendeskModule extends KrollModule {
 
     @Kroll.method
     public void showMessaging() {
-        MessagingActivity.builder().show(TiApplication.getAppCurrentActivity());
+        Configuration requestActivityConfig = RequestActivity.builder()
+                .withTags("android")
+                .config();
+
+        RequestListActivity.builder().show(TiApplication.getAppCurrentActivity(), requestActivityConfig);
     }
 
     @Kroll.method
