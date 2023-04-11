@@ -1,7 +1,8 @@
 repositories {
-	maven { url 'https://zendesk.jfrog.io/zendesk/repo' }
+	maven { url 'https://zendesk.jfrog.io/artifactory/repo' }
 }
 
 dependencies {
-	implementation group: 'com.zendesk', name: 'support', version: '5.1.1'
+	implementation "zendesk.messaging:messaging-android:2.9.0"
+	implementation 'com.auth0:java-jwt:4.4.0'
 }

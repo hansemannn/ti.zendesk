@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/TiZendesk-Swift.h</key>
 		<data>
-		Y8tcYXYAsGVosEB54Zzt04jXaYg=
+		/yUgPZ7nxB+UXhbmcbijasCVqcE=
 		</data>
 		<key>Headers/TiZendesk.h</key>
 		<data>
@@ -18,47 +18,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dDLvLP3VgeQ7cwXGu0QIH5vtd8A=
+		yvmVD5y+RjJVwVuRGyWBUiWhzJg=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		M4xXOT+a4gHvlm43xKKpp4YBy5I=
+		ul/zSGGXK+XkuPj+wx1L/6fL/0g=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		wgj70OgrlVYaXcbRnkEeq68ffF0=
+		IfPQSqEL03FZ3shFFNQS6L0lpa8=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		0GclVCWcApiOQdJ/SNT8sWCPgM0=
+		WsJ1zodxu0dRJBfEdNnTLJN5IbA=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		wgj70OgrlVYaXcbRnkEeq68ffF0=
+		IfPQSqEL03FZ3shFFNQS6L0lpa8=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4ygIRGUzm6TbhswThhRCPqfZJtU=
+		3/osOZxNyowQ02LQT167dBTVqrY=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		M4xXOT+a4gHvlm43xKKpp4YBy5I=
+		ul/zSGGXK+XkuPj+wx1L/6fL/0g=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		wPaiLClv0MkV1whFjJkASxw9J2A=
+		1fVX3PSE8pjZO76DVYUPUYQ4x48=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		OHTfP3wGwTz2Ysu0UjVjUllS/6Q=
+		82cH0+86YCq4DwBqY3lgGXKjDqY=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		wPaiLClv0MkV1whFjJkASxw9J2A=
+		1fVX3PSE8pjZO76DVYUPUYQ4x48=
 		</data>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kFRFJAacpN5nnYP8C3PERB6BGRM=
+		CRrr40EOtIui0P9srhgK60yXrZg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			enYuWzQkj4hvNtlxm6ZVUmjeJJKv+3RVILKXgBwp6vg=
+			1D1Mgjo2XwG2VwWINCuOlLecec9CL6WGVSb23QIiSLg=
 			</data>
 		</dict>
 		<key>Headers/TiZendesk.h</key>
@@ -92,70 +92,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hHMFoUjwZukvKMXut7YWvhdcqpqEK13MhBgYv5rQayQ=
+			Ps/POpEPEWsSrrodbaY5O/y+BqydIJaLGyC1fhoyCpU=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cUpCHUPzl2ZHis7cLqjlZ68E0BxUgrC1GIEKdkIRRII=
+			0zjtu2efAhnQj+ndtvtvHC7JfIe/hBxjvwsfYbRTXD4=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lbT+Km15/2F8fOARHN7Gxa3CU3yTnmrgryA2ZhzjXNM=
+			CVzzh+H575hYqfTCTn2wPQUvEBe8p2tP3N5mzSh8UC4=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cUpCHUPzl2ZHis7cLqjlZ68E0BxUgrC1GIEKdkIRRII=
+			0zjtu2efAhnQj+ndtvtvHC7JfIe/hBxjvwsfYbRTXD4=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8y95zaIa0cCuW74B2Nu7AIRCBk+qHjuB5mcc9Z4G4j8=
+			BxyJPVoqmdlyfmmc9szLu9KoGs+k/SFZrlBpLmRkqe4=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hHMFoUjwZukvKMXut7YWvhdcqpqEK13MhBgYv5rQayQ=
+			Ps/POpEPEWsSrrodbaY5O/y+BqydIJaLGyC1fhoyCpU=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KjsiNFTRyZpGJUEShUjfV0NyFu1qeC1lYBQ3PaLliLY=
+			FDIsNSPMLsHtrDxltsEsrcyRQODqBW0q0QRCRpvTgEg=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dHco1euYCrwrz/Ck1WbCh0l1fClrrsIoiT1W+v3/lmk=
+			CZwy1XACGXTqghz87xbZ8Aba+75MbDhedAaob6vkZm0=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KjsiNFTRyZpGJUEShUjfV0NyFu1qeC1lYBQ3PaLliLY=
+			FDIsNSPMLsHtrDxltsEsrcyRQODqBW0q0QRCRpvTgEg=
 			</data>
 		</dict>
 		<key>Modules/TiZendesk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			evZgjI/WgVBrMHnDtJgWqmElcBlT/Sj2W3sz3BeN4z4=
+			6/tchd1cJuZEd7TpochIKpmuhLpa4TocVEnx1FNdgE8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -3,3 +3,4 @@ android/dist/
 
 ios/dist
 .DS_Store
+/ios/Carthage

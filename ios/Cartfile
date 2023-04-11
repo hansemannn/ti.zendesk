@@ -1,1 +1,1 @@
-github "zendesk/support_sdk_ios" ~> 5.3.0
+github "zendesk/sdk_messaging_ios"

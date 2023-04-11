@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A273C7628916F9100B31394 /* MessagingSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A273C6F28916F9100B31394 /* MessagingSDK.xcframework */; };
-		3A273C7728916F9100B31394 /* SDKConfigurations.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A273C7028916F9100B31394 /* SDKConfigurations.xcframework */; };
-		3A273C7828916F9100B31394 /* ZendeskCoreSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A273C7128916F9100B31394 /* ZendeskCoreSDK.xcframework */; };
-		3A273C7928916F9100B31394 /* SupportSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A273C7228916F9100B31394 /* SupportSDK.xcframework */; };
-		3A273C7A28916F9100B31394 /* MessagingAPI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A273C7328916F9100B31394 /* MessagingAPI.xcframework */; };
-		3A273C7B28916F9100B31394 /* SupportProvidersSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A273C7428916F9100B31394 /* SupportProvidersSDK.xcframework */; };
-		3A273C7C28916F9100B31394 /* CommonUISDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A273C7528916F9100B31394 /* CommonUISDK.xcframework */; };
+		3A9E2CF629E6A03300A60B48 /* ZendeskSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CEC29E6A03300A60B48 /* ZendeskSDK.xcframework */; };
+		3A9E2CF729E6A03300A60B48 /* ZendeskSDKLogger.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CED29E6A03300A60B48 /* ZendeskSDKLogger.xcframework */; };
+		3A9E2CF829E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CEE29E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework */; };
+		3A9E2CF929E6A03300A60B48 /* ZendeskSDKStorage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CEF29E6A03300A60B48 /* ZendeskSDKStorage.xcframework */; };
+		3A9E2CFA29E6A03300A60B48 /* ZendeskSDKConversationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CF029E6A03300A60B48 /* ZendeskSDKConversationKit.xcframework */; };
+		3A9E2CFB29E6A03300A60B48 /* ZendeskSDKUIComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CF129E6A03300A60B48 /* ZendeskSDKUIComponents.xcframework */; };
+		3A9E2CFC29E6A03300A60B48 /* ZendeskSDKMessaging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CF229E6A03300A60B48 /* ZendeskSDKMessaging.xcframework */; };
+		3A9E2CFD29E6A03300A60B48 /* ZendeskSDKFayeClient.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CF329E6A03300A60B48 /* ZendeskSDKFayeClient.xcframework */; };
+		3A9E2CFE29E6A03300A60B48 /* ZendeskSDKCoreUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CF429E6A03300A60B48 /* ZendeskSDKCoreUtilities.xcframework */; };
+		3A9E2CFF29E6A03300A60B48 /* ZendeskSDKSocketClient.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CF529E6A03300A60B48 /* ZendeskSDKSocketClient.xcframework */; };
 		B1E00E65241D179500C384C1 /* TitaniumKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */; };
 		DB34CDE0207B998A005F8E8C /* TiZendeskModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = DB34CDDE207B998A005F8E8C /* TiZendeskModuleAssets.m */; };
 		DB34CDE1207B998A005F8E8C /* TiZendeskModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = DB34CDDF207B998A005F8E8C /* TiZendeskModuleAssets.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,13 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A273C6F28916F9100B31394 /* MessagingSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MessagingSDK.xcframework; path = platform/MessagingSDK.xcframework; sourceTree = "<group>"; };
-		3A273C7028916F9100B31394 /* SDKConfigurations.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDKConfigurations.xcframework; path = platform/SDKConfigurations.xcframework; sourceTree = "<group>"; };
-		3A273C7128916F9100B31394 /* ZendeskCoreSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskCoreSDK.xcframework; path = platform/ZendeskCoreSDK.xcframework; sourceTree = "<group>"; };
-		3A273C7228916F9100B31394 /* SupportSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SupportSDK.xcframework; path = platform/SupportSDK.xcframework; sourceTree = "<group>"; };
-		3A273C7328916F9100B31394 /* MessagingAPI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MessagingAPI.xcframework; path = platform/MessagingAPI.xcframework; sourceTree = "<group>"; };
-		3A273C7428916F9100B31394 /* SupportProvidersSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SupportProvidersSDK.xcframework; path = platform/SupportProvidersSDK.xcframework; sourceTree = "<group>"; };
-		3A273C7528916F9100B31394 /* CommonUISDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CommonUISDK.xcframework; path = platform/CommonUISDK.xcframework; sourceTree = "<group>"; };
+		3A9E2CEC29E6A03300A60B48 /* ZendeskSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDK.xcframework; path = platform/ZendeskSDK.xcframework; sourceTree = "<group>"; };
+		3A9E2CED29E6A03300A60B48 /* ZendeskSDKLogger.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKLogger.xcframework; path = platform/ZendeskSDKLogger.xcframework; sourceTree = "<group>"; };
+		3A9E2CEE29E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKHTTPClient.xcframework; path = platform/ZendeskSDKHTTPClient.xcframework; sourceTree = "<group>"; };
+		3A9E2CEF29E6A03300A60B48 /* ZendeskSDKStorage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKStorage.xcframework; path = platform/ZendeskSDKStorage.xcframework; sourceTree = "<group>"; };
+		3A9E2CF029E6A03300A60B48 /* ZendeskSDKConversationKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKConversationKit.xcframework; path = platform/ZendeskSDKConversationKit.xcframework; sourceTree = "<group>"; };
+		3A9E2CF129E6A03300A60B48 /* ZendeskSDKUIComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKUIComponents.xcframework; path = platform/ZendeskSDKUIComponents.xcframework; sourceTree = "<group>"; };
+		3A9E2CF229E6A03300A60B48 /* ZendeskSDKMessaging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKMessaging.xcframework; path = platform/ZendeskSDKMessaging.xcframework; sourceTree = "<group>"; };
+		3A9E2CF329E6A03300A60B48 /* ZendeskSDKFayeClient.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKFayeClient.xcframework; path = platform/ZendeskSDKFayeClient.xcframework; sourceTree = "<group>"; };
+		3A9E2CF429E6A03300A60B48 /* ZendeskSDKCoreUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKCoreUtilities.xcframework; path = platform/ZendeskSDKCoreUtilities.xcframework; sourceTree = "<group>"; };
+		3A9E2CF529E6A03300A60B48 /* ZendeskSDKSocketClient.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKSocketClient.xcframework; path = platform/ZendeskSDKSocketClient.xcframework; sourceTree = "<group>"; };
 		B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TitaniumKit.xcframework; path = "$(TITANIUM_SDK)/iphone/Frameworks/TitaniumKit.xcframework"; sourceTree = "<group>"; };
 		DB34CDDE207B998A005F8E8C /* TiZendeskModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiZendeskModuleAssets.m; path = Classes/TiZendeskModuleAssets.m; sourceTree = SOURCE_ROOT; };
 		DB34CDDF207B998A005F8E8C /* TiZendeskModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiZendeskModuleAssets.h; path = Classes/TiZendeskModuleAssets.h; sourceTree = SOURCE_ROOT; };
@@ -48,15 +54,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A273C7A28916F9100B31394 /* MessagingAPI.xcframework in Frameworks */,
 				DB34CDE6207B9EBD005F8E8C /* Foundation.framework in Frameworks */,
-				3A273C7828916F9100B31394 /* ZendeskCoreSDK.xcframework in Frameworks */,
-				3A273C7B28916F9100B31394 /* SupportProvidersSDK.xcframework in Frameworks */,
-				3A273C7928916F9100B31394 /* SupportSDK.xcframework in Frameworks */,
-				3A273C7728916F9100B31394 /* SDKConfigurations.xcframework in Frameworks */,
-				3A273C7628916F9100B31394 /* MessagingSDK.xcframework in Frameworks */,
-				3A273C7C28916F9100B31394 /* CommonUISDK.xcframework in Frameworks */,
+				3A9E2CFE29E6A03300A60B48 /* ZendeskSDKCoreUtilities.xcframework in Frameworks */,
+				3A9E2CFC29E6A03300A60B48 /* ZendeskSDKMessaging.xcframework in Frameworks */,
+				3A9E2CF829E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework in Frameworks */,
+				3A9E2CF729E6A03300A60B48 /* ZendeskSDKLogger.xcframework in Frameworks */,
+				3A9E2CFA29E6A03300A60B48 /* ZendeskSDKConversationKit.xcframework in Frameworks */,
+				3A9E2CF929E6A03300A60B48 /* ZendeskSDKStorage.xcframework in Frameworks */,
+				3A9E2CFF29E6A03300A60B48 /* ZendeskSDKSocketClient.xcframework in Frameworks */,
+				3A9E2CF629E6A03300A60B48 /* ZendeskSDK.xcframework in Frameworks */,
 				B1E00E65241D179500C384C1 /* TitaniumKit.xcframework in Frameworks */,
+				3A9E2CFD29E6A03300A60B48 /* ZendeskSDKFayeClient.xcframework in Frameworks */,
+				3A9E2CFB29E6A03300A60B48 /* ZendeskSDKUIComponents.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +96,16 @@
 		DB34CDE2207B9D6A005F8E8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A9E2CEC29E6A03300A60B48 /* ZendeskSDK.xcframework */,
+				3A9E2CF029E6A03300A60B48 /* ZendeskSDKConversationKit.xcframework */,
+				3A9E2CF429E6A03300A60B48 /* ZendeskSDKCoreUtilities.xcframework */,
+				3A9E2CF329E6A03300A60B48 /* ZendeskSDKFayeClient.xcframework */,
+				3A9E2CEE29E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework */,
+				3A9E2CED29E6A03300A60B48 /* ZendeskSDKLogger.xcframework */,
+				3A9E2CF229E6A03300A60B48 /* ZendeskSDKMessaging.xcframework */,
+				3A9E2CF529E6A03300A60B48 /* ZendeskSDKSocketClient.xcframework */,
+				3A9E2CEF29E6A03300A60B48 /* ZendeskSDKStorage.xcframework */,
+				3A9E2CF129E6A03300A60B48 /* ZendeskSDKUIComponents.xcframework */,
 				B1E00E64241D179500C384C1 /* TitaniumKit.xcframework */,
 				DB34CDE5207B9EBD005F8E8C /* Foundation.framework */,
 			);
@@ -99,13 +118,6 @@
 				DB52E22C1E9CCD7000AAAEE0 /* TiZendesk */,
 				DB52E22B1E9CCD7000AAAEE0 /* Products */,
 				DB34CDE2207B9D6A005F8E8C /* Frameworks */,
-				3A273C7528916F9100B31394 /* CommonUISDK.xcframework */,
-				3A273C7328916F9100B31394 /* MessagingAPI.xcframework */,
-				3A273C6F28916F9100B31394 /* MessagingSDK.xcframework */,
-				3A273C7028916F9100B31394 /* SDKConfigurations.xcframework */,
-				3A273C7428916F9100B31394 /* SupportProvidersSDK.xcframework */,
-				3A273C7228916F9100B31394 /* SupportSDK.xcframework */,
-				3A273C7128916F9100B31394 /* ZendeskCoreSDK.xcframework */,
 			);
 			sourceTree = "<group>";
 		};

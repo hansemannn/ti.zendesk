@@ -23,20 +23,84 @@
       },
       {
         "kind": "Import",
-        "name": "ZendeskCoreSDK",
-        "printedName": "ZendeskCoreSDK",
+        "name": "ZendeskSDKMessaging",
+        "printedName": "ZendeskSDKMessaging",
         "declKind": "Import",
         "moduleName": "TiZendesk"
       },
       {
         "kind": "Import",
-        "name": "SupportSDK",
-        "printedName": "SupportSDK",
+        "name": "ZendeskSDK",
+        "printedName": "ZendeskSDK",
         "declKind": "Import",
         "moduleName": "TiZendesk"
       }
     ],
     "json_format_version": 8
   },
-  "ConstValues": []
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 321,
+      "length": 38,
+      "value": "\"5957ff5a-adde-45f5-aea2-2b887f97f9a9\""
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 418,
+      "length": 12,
+      "value": "\"ti.zendesk\""
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 605,
+      "length": 12,
+      "value": "\"channelKey\""
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 653,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "Dictionary",
+      "offset": 668,
+      "length": 49,
+      "value": "[(\"error\", \"Missing required Zendesk channel key\")]"
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 906,
+      "length": 69,
+      "value": "\"Messaging did not initialize.\nError: \""
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 974,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 1021,
+      "length": 7,
+      "value": "\"ready\""
+    },
+    {
+      "filePath": "\/Users\/hans\/Documents\/dev\/ti.zendesk\/ios\/Classes\/TiZendeskModule.swift",
+      "kind": "StringLiteral",
+      "offset": 1486,
+      "length": 5,
+      "value": "\"jwt\""
+    }
+  ]
 }

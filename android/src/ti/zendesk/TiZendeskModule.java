@@ -12,72 +12,76 @@ import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.titanium.TiApplication;
 
-import zendesk.configurations.Configuration;
-import zendesk.core.AnonymousIdentity;
-import zendesk.core.JwtIdentity;
-import zendesk.core.Zendesk;
-import zendesk.messaging.MessagingActivity;
-import zendesk.support.Support;
-import zendesk.support.request.RequestActivity;
-import zendesk.support.requestlist.RequestListActivity;
+import android.util.Log;
 
-import com.zendesk.service.ErrorResponse;
-import com.zendesk.service.ZendeskCallback;
+import androidx.annotation.NonNull;
+
+import com.auth0.jwt.JWT;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import zendesk.android.FailureCallback;
+import zendesk.android.SuccessCallback;
+import zendesk.android.Zendesk;
+import zendesk.android.ZendeskUser;
+import zendesk.messaging.android.DefaultMessagingFactory;
+import zendesk.messaging.android.push.PushNotifications;
 
 @Kroll.module(name = "TiZendesk", id = "ti.zendesk")
 public class TiZendeskModule extends KrollModule {
 
     // Methods
+
     @Kroll.method
     public void initialize(KrollDict params) {
-        String appId = params.getString("appId");
-        String clientId = params.getString("clientId");
-        String url = params.getString("url");
+        String channelKey = params.getString("channelKey");
 
-        Zendesk.INSTANCE.init(TiApplication.getAppCurrentActivity(), url, appId, clientId);
-        Support.INSTANCE.init(Zendesk.INSTANCE);
+        Zendesk.initialize(
+                TiApplication.getAppRootOrCurrentActivity(),
+                channelKey,
+                zendesk -> Log.i("TiZendesk", "Initialization successful"),
+                error -> Log.e("TiZendesk", "Messaging failed to initialize", error),
+                new DefaultMessagingFactory()
+        );
     }
 
     @Kroll.method
     public void loginUser(KrollDict params) {
         if (params != null) {
-            String jwt = params.getString("jwt");
+            String externalId = params.getString("externalId");
             String name = params.getString("name");
             String email = params.getString("email");
 
-            if (jwt != null) {
-                Zendesk.INSTANCE.setIdentity(new JwtIdentity(jwt));
-            } else if (name != null && email != null) {
-                Zendesk.INSTANCE.setIdentity(new AnonymousIdentity.Builder()
-                        .withEmailIdentifier(email)
-                        .withNameIdentifier(name)
-                        .build());
+            if (externalId != null && name != null && email != null) {
+                HashMap<String, String> payload = new HashMap<>() {};
+                payload.put("externalId", externalId);
+                payload.put("name", name);
+                payload.put("email", email);
+
+                String jwt = JWT.create()
+                        .withPayload(payload)
+                        .toString();
+
+                Log.w("TiZendesk", "Created JWT: " + jwt);
+
+                Zendesk.getInstance().loginUser(jwt, value -> {
+                    Log.d("TiZendesk", "Authenticated successfully!");
+                }, error -> {
+                    Log.e("TiZendesk", "Authentication failed!", error);
+                });
             }
-
-            return;
         }
-
-        Zendesk.INSTANCE.setIdentity(new AnonymousIdentity());
     }
 
     @Kroll.method
     public void showMessaging() {
-        Configuration requestActivityConfig = RequestActivity.builder()
-                .withTags("android")
-                .config();
-
-        RequestListActivity.builder().show(TiApplication.getAppCurrentActivity(), requestActivityConfig);
+        Zendesk.getInstance().getMessaging().showMessaging(TiApplication.getAppCurrentActivity());
     }
 
     @Kroll.method
-    public void registerForPushNotifications(String pushToken) {
-        Zendesk.INSTANCE.provider().pushRegistrationProvider().registerWithDeviceIdentifier(pushToken, new ZendeskCallback<String>() {
-            @Override
-            public void onSuccess(String result) {}
-
-            @Override
-            public void onError(ErrorResponse error) {}
-        });
+    public void updatePushToken(String pushToken) {
+        PushNotifications.updatePushNotificationToken(pushToken);
     }
 }
 
