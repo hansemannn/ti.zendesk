@@ -14,17 +14,12 @@ import org.appcelerator.titanium.TiApplication;
 
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-
 import com.auth0.jwt.JWT;
 
 import java.util.HashMap;
-import java.util.Map;
 
-import zendesk.android.FailureCallback;
-import zendesk.android.SuccessCallback;
 import zendesk.android.Zendesk;
-import zendesk.android.ZendeskUser;
+import zendesk.logger.Logger;
 import zendesk.messaging.android.DefaultMessagingFactory;
 import zendesk.messaging.android.push.PushNotifications;
 
@@ -36,11 +31,14 @@ public class TiZendeskModule extends KrollModule {
     @Kroll.method
     public void initialize(KrollDict params) {
         String channelKey = params.getString("channelKey");
+        Boolean logsEnabled = params.optBoolean("logsEnabled", false);
+
+        Logger.setLoggable(logsEnabled);
 
         Zendesk.initialize(
                 TiApplication.getAppRootOrCurrentActivity(),
                 channelKey,
-                zendesk -> Log.i("TiZendesk", "Initialization successful"),
+                zendesk -> Log.d("TiZendesk", "Initialization successful"),
                 error -> Log.e("TiZendesk", "Messaging failed to initialize", error),
                 new DefaultMessagingFactory()
         );
@@ -63,8 +61,6 @@ public class TiZendeskModule extends KrollModule {
                         .withPayload(payload)
                         .toString();
 
-                Log.w("TiZendesk", "Created JWT: " + jwt);
-
                 Zendesk.getInstance().loginUser(jwt, value -> {
                     Log.d("TiZendesk", "Authenticated successfully!");
                 }, error -> {
@@ -72,6 +68,11 @@ public class TiZendeskModule extends KrollModule {
                 });
             }
         }
+    }
+
+    @Kroll.method
+    public void updateUser(KrollDict params) {
+        loginUser(params);
     }
 
     @Kroll.method

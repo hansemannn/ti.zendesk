@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A40E4BC29E73821007CE912 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A40E4BB29E73821007CE912 /* JWT.swift */; };
 		3A9E2CF629E6A03300A60B48 /* ZendeskSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CEC29E6A03300A60B48 /* ZendeskSDK.xcframework */; };
 		3A9E2CF729E6A03300A60B48 /* ZendeskSDKLogger.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CED29E6A03300A60B48 /* ZendeskSDKLogger.xcframework */; };
 		3A9E2CF829E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9E2CEE29E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A40E4BB29E73821007CE912 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = Classes/JWT.swift; sourceTree = "<group>"; };
 		3A9E2CEC29E6A03300A60B48 /* ZendeskSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDK.xcframework; path = platform/ZendeskSDK.xcframework; sourceTree = "<group>"; };
 		3A9E2CED29E6A03300A60B48 /* ZendeskSDKLogger.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKLogger.xcframework; path = platform/ZendeskSDKLogger.xcframework; sourceTree = "<group>"; };
 		3A9E2CEE29E6A03300A60B48 /* ZendeskSDKHTTPClient.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZendeskSDKHTTPClient.xcframework; path = platform/ZendeskSDKHTTPClient.xcframework; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				DB52E2421E9CD0F800AAAEE0 /* TiZendeskModule.swift */,
+				3A40E4BB29E73821007CE912 /* JWT.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				DB34CDE0207B998A005F8E8C /* TiZendeskModuleAssets.m in Sources */,
 				DB52E2431E9CD0F800AAAEE0 /* TiZendeskModule.swift in Sources */,
+				3A40E4BC29E73821007CE912 /* JWT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

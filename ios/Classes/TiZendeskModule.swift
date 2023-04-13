@@ -11,6 +11,7 @@ import TitaniumKit
 
 import ZendeskSDKMessaging
 import ZendeskSDK
+import ZendeskSDKLogger
 
 @objc(TiZendeskModule)
 class TiZendeskModule: TiModule {
@@ -30,7 +31,12 @@ class TiZendeskModule: TiModule {
       fireEvent("error", with: ["error": "Missing required Zendesk channel key"])
       return
     }
-
+    
+    if params["logsEnabled"] as? Bool == true {
+      Logger.level = .debug
+      Logger.enabled = true
+    }
+    
     Zendesk.initialize(withChannelKey: channelKey, messagingFactory: DefaultMessagingFactory()) { result in
       if case let .failure(error) = result {
         print("Messaging did not initialize.\nError: \(error.localizedDescription)")
@@ -61,7 +67,7 @@ class TiZendeskModule: TiModule {
       return
     }
     
-    let jwt = "" // TODO: Generate JWT from external ID, name and email (via "payload" field)
+    let jwt = generateJWT(externalId: externalId, name: name, email: email)
     
     Zendesk.instance?.loginUser(with: jwt)
   }
