@@ -23,7 +23,17 @@ class TiZendeskModule: TiModule {
   override func moduleId() -> String! {
     return "ti.zendesk"
   }
+
+  override func _configure() {
+    super._configure()
+    TiApp.sharedApp().registerApplicationDelegate(self)
+  }
   
+  override func _destroy() {
+    super._destroy()
+    TiApp.sharedApp().unregisterApplicationDelegate(self)
+  }
+
   @objc(initialize:)
   func initialize(arguments: [Any]) {
     // Verify channel key
@@ -43,7 +53,7 @@ class TiZendeskModule: TiModule {
         return
       }
     }
-
+    
     fireEvent("ready")
   }
   
@@ -52,7 +62,6 @@ class TiZendeskModule: TiModule {
     guard let viewController = Zendesk.instance?.messaging?.messagingViewController() else {
       return
     }
-
     TiApp.controller().topPresentedController().show(viewController, sender: self)
   }
   
@@ -63,7 +72,6 @@ class TiZendeskModule: TiModule {
           let externalId = params["externalId"] as? String,
           let name = params["name"] as? String,
           let email = params["email"] as? String else {
-            
       return
     }
     
@@ -77,8 +85,33 @@ class TiZendeskModule: TiModule {
     self.loginUser(arguments: arguments)
   }
   
-  @objc(logout:)
-  func logout(arguments: [Any]?) {
+  @objc(logoutUser:)
+  func logoutUser(arguments: [Any]?) {
     Zendesk.instance?.logoutUser()
+  }
+  
+  func convertToData(fromHexString hexString: String) -> Data? {
+    let length = hexString.count / 2
+    var data = Data(capacity: length)
+    for i in 0..<length {
+      let start = hexString.index(hexString.startIndex, offsetBy: i*2)
+      let end = hexString.index(start, offsetBy: 2)
+      let range = start..<end
+      if let byte = UInt8(hexString[range], radix: 16) {
+        data.append(byte)
+      } else {
+        return nil
+      }
+    }
+    return data
+  }
+}
+
+// MARK: UIApplicationDelegate
+
+extension TiZendeskModule: UIApplicationDelegate {
+  
+  func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    PushNotifications.updatePushNotificationToken(deviceToken)
   }
 }

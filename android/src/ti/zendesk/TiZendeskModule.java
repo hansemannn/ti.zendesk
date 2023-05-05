@@ -14,10 +14,16 @@ import org.appcelerator.titanium.TiApplication;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 
 import java.util.HashMap;
 
+import kotlin.Unit;
+import zendesk.android.FailureCallback;
+import zendesk.android.SuccessCallback;
 import zendesk.android.Zendesk;
 import zendesk.logger.Logger;
 import zendesk.messaging.android.DefaultMessagingFactory;
@@ -59,15 +65,24 @@ public class TiZendeskModule extends KrollModule {
 
                 String jwt = JWT.create()
                         .withPayload(payload)
-                        .toString();
+                        .sign(Algorithm.none());
 
                 Zendesk.getInstance().loginUser(jwt, value -> {
-                    Log.d("TiZendesk", "Authenticated successfully!");
+                    Log.d("TiZendesk", "Login successfully!");
                 }, error -> {
-                    Log.e("TiZendesk", "Authentication failed!", error);
+                    Log.e("TiZendesk", "Login failed!", error);
                 });
             }
         }
+    }
+
+    @Kroll.method
+    public void logoutUser(KrollDict params) {
+        Zendesk.getInstance().logoutUser(unit -> {
+            Log.d("TiZendesk", "Logout successfully!");
+        }, error -> {
+            Log.e("TiZendesk", "Logout failed!", error);
+        });
     }
 
     @Kroll.method
